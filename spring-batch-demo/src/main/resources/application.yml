@@ -1,0 +1,19 @@
+server:
+  port: 9876
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/batch?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&autoReconnect=true
+    hikari:
+      password: root
+      username: root
+  jpa:
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
+  # 禁止项目启动时运行job
+  batch:
+    job:
+      enabled: false
